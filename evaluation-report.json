@@ -69,7 +69,8 @@
         "RustAssay",
         "SwiftAssay"
       ],
-      "finding": "README claims Apache-2.0 but USB source has no LICENSE file; confirm licensing before public distribution"
+      "finding": "README claims Apache-2.0 but USB source has no LICENSE file; confirm licensing before public distribution",
+      "resolution": "Owner authorized Apache-2.0 open-source publication; root LICENSE now covers this collection, and standalone repositories include LICENSE files."
     },
     {
       "severity": "qualification",
@@ -103,12 +104,12 @@
     "patch": "kotlin-integration.patch"
   },
   "publication": {
-    "default": "Private until destination and visibility are confirmed",
+    "visibility": "Public, explicitly requested by owner",
+    "license": "Apache-2.0",
     "notClaimed": [
       "Release readiness",
       "General purity proof",
-      "Android or iOS qualification",
-      "License grant for unlicensed source"
+      "Android or iOS qualification"
     ]
   }
 }
