@@ -1,0 +1,142 @@
+[
+  {
+    "project": "PythonAssay",
+    "case": "clean",
+    "exitCode": 0,
+    "stdout": "{\"findings\":[],\"root\":\"/home/arun/Developer/Assay-USB-Review/PythonAssay/examples/clean/src/domain\",\"scannedFiles\":1,\"schemaVersion\":\"python-assay/v0.1\",\"verdict\":\"Pass\"}",
+    "stderr": ""
+  },
+  {
+    "project": "PythonAssay",
+    "case": "violations",
+    "exitCode": 1,
+    "stdout": "{\"findings\":[{\"column\":15,\"line\":2,\"message\":\"Domain code does not perform named filesystem, network, or console effects.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/PythonAssay/examples/violations/src/domain/order.py\",\"rule_id\":\"PYA-F002\"},{\"column\":5,\"line\":3,\"message\":\"Domain code does not perform named filesystem, network, or console effects.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/PythonAssay/examples/violations/src/domain/order.py\",\"rule_id\":\"PYA-F002\"},{\"column\":5,\"line\":4,\"message\":\"Expected domain failures are values, not raised control flow.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/PythonAssay/examples/violations/src/domain/order.py\",\"rule_id\":\"PYA-F001\"}],\"root\":\"/home/arun/Developer/Assay-USB-Review/PythonAssay/examples/violations/src/domain\",\"scannedFiles\":1,\"schemaVersion\":\"python-assay/v0.1\",\"verdict\":\"Fail\"}",
+    "stderr": ""
+  },
+  {
+    "project": "PythonAssay",
+    "case": "empty",
+    "exitCode": 0,
+    "stdout": "{\"findings\":[],\"root\":\"/tmp/assay-adversarial-20iqklgi/PythonAssay-empty\",\"scannedFiles\":0,\"schemaVersion\":\"python-assay/v0.1\",\"verdict\":\"Pass\"}",
+    "stderr": ""
+  },
+  {
+    "project": "PythonAssay",
+    "case": "comment",
+    "exitCode": 1,
+    "stdout": "{\"findings\":[{\"column\":3,\"line\":1,\"message\":\"Expected domain failures are values, not raised control flow.\",\"path\":\"/tmp/assay-adversarial-20iqklgi/PythonAssay-comment/Comment.py\",\"rule_id\":\"PYA-F001\"}],\"root\":\"/tmp/assay-adversarial-20iqklgi/PythonAssay-comment\",\"scannedFiles\":1,\"schemaVersion\":\"python-assay/v0.1\",\"verdict\":\"Fail\"}",
+    "stderr": ""
+  },
+  {
+    "project": "PythonAssay",
+    "case": "missing",
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "python-assay: not a directory: /tmp/assay-adversarial-20iqklgi/PythonAssay-missing"
+  },
+  {
+    "project": "RustAssay",
+    "case": "clean",
+    "exitCode": 0,
+    "stdout": "{\"schemaVersion\":\"rust-assay/v0.1\",\"root\":\"/home/arun/Developer/Assay-USB-Review/RustAssay/examples/clean/src/domain\",\"scannedFiles\":1,\"verdict\":\"Pass\",\"findings\":[]}",
+    "stderr": ""
+  },
+  {
+    "project": "RustAssay",
+    "case": "violations",
+    "exitCode": 1,
+    "stdout": "{\"schemaVersion\":\"rust-assay/v0.1\",\"root\":\"/home/arun/Developer/Assay-USB-Review/RustAssay/examples/violations/src/domain\",\"scannedFiles\":1,\"verdict\":\"Fail\",\"findings\":[{\"ruleId\":\"RSA-F003\",\"path\":\"/home/arun/Developer/Assay-USB-Review/RustAssay/examples/violations/src/domain/order.rs\",\"line\":2,\"column\":17,\"message\":\"Domain code does not perform named effects\"},{\"ruleId\":\"RSA-F001\",\"path\":\"/home/arun/Developer/Assay-USB-Review/RustAssay/examples/violations/src/domain/order.rs\",\"line\":2,\"column\":53,\"message\":\"Expected domain failures use Result rather than unwrap or expect\"},{\"ruleId\":\"RSA-F003\",\"path\":\"/home/arun/Developer/Assay-USB-Review/RustAssay/examples/violations/src/domain/order.rs\",\"line\":3,\"column\":5,\"message\":\"Domain code does not perform named effects\"}]}",
+    "stderr": ""
+  },
+  {
+    "project": "RustAssay",
+    "case": "empty",
+    "exitCode": 0,
+    "stdout": "{\"schemaVersion\":\"rust-assay/v0.1\",\"root\":\"/tmp/assay-adversarial-20iqklgi/RustAssay-empty\",\"scannedFiles\":0,\"verdict\":\"Pass\",\"findings\":[]}",
+    "stderr": ""
+  },
+  {
+    "project": "RustAssay",
+    "case": "comment",
+    "exitCode": 1,
+    "stdout": "{\"schemaVersion\":\"rust-assay/v0.1\",\"root\":\"/tmp/assay-adversarial-20iqklgi/RustAssay-comment\",\"scannedFiles\":1,\"verdict\":\"Fail\",\"findings\":[{\"ruleId\":\"RSA-F002\",\"path\":\"/tmp/assay-adversarial-20iqklgi/RustAssay-comment/Comment.rs\",\"line\":1,\"column\":4,\"message\":\"Domain code does not terminate control flow with panic macros\"}]}",
+    "stderr": ""
+  },
+  {
+    "project": "RustAssay",
+    "case": "missing",
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "rust-assay: No such file or directory (os error 2)"
+  },
+  {
+    "project": "SwiftAssay",
+    "case": "clean",
+    "exitCode": 0,
+    "stdout": "{\"findings\":[],\"root\":\"/home/arun/Developer/Assay-USB-Review/SwiftAssay/Examples/Clean/Sources/Domain\",\"scannedFiles\":1,\"schemaVersion\":\"swift-assay/v0.1\",\"verdict\":\"Pass\"}",
+    "stderr": ""
+  },
+  {
+    "project": "SwiftAssay",
+    "case": "violations",
+    "exitCode": 1,
+    "stdout": "{\"findings\":[{\"column\":1,\"line\":1,\"message\":\"Domain code does not import or perform named effects.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/SwiftAssay/Examples/Violations/Sources/Domain/Order.swift\",\"ruleId\":\"SWA-F002\"},{\"column\":17,\"line\":4,\"message\":\"Expected domain failures are values, not forced failures or traps.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/SwiftAssay/Examples/Violations/Sources/Domain/Order.swift\",\"ruleId\":\"SWA-F001\"},{\"column\":5,\"line\":5,\"message\":\"Domain code does not import or perform named effects.\",\"path\":\"/home/arun/Developer/Assay-USB-Review/SwiftAssay/Examples/Violations/Sources/Domain/Order.swift\",\"ruleId\":\"SWA-F002\"}],\"root\":\"/home/arun/Developer/Assay-USB-Review/SwiftAssay/Examples/Violations/Sources/Domain\",\"scannedFiles\":1,\"schemaVersion\":\"swift-assay/v0.1\",\"verdict\":\"Fail\"}",
+    "stderr": ""
+  },
+  {
+    "project": "SwiftAssay",
+    "case": "empty",
+    "exitCode": 0,
+    "stdout": "{\"findings\":[],\"root\":\"/tmp/assay-adversarial-20iqklgi/SwiftAssay-empty\",\"scannedFiles\":0,\"schemaVersion\":\"swift-assay/v0.1\",\"verdict\":\"Pass\"}",
+    "stderr": ""
+  },
+  {
+    "project": "SwiftAssay",
+    "case": "comment",
+    "exitCode": 1,
+    "stdout": "{\"findings\":[{\"column\":4,\"line\":1,\"message\":\"Expected domain failures are values, not forced failures or traps.\",\"path\":\"/tmp/assay-adversarial-20iqklgi/SwiftAssay-comment/Comment.swift\",\"ruleId\":\"SWA-F001\"}],\"root\":\"/tmp/assay-adversarial-20iqklgi/SwiftAssay-comment\",\"scannedFiles\":1,\"schemaVersion\":\"swift-assay/v0.1\",\"verdict\":\"Fail\"}",
+    "stderr": ""
+  },
+  {
+    "project": "SwiftAssay",
+    "case": "missing",
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "swift-assay: The operation could not be completed. The file doesn\u2019t exist."
+  },
+  {
+    "project": "KotlinAssay",
+    "case": "clean",
+    "exitCode": 0,
+    "stdout": "{\"schemaVersion\":\"kotlin-assay/v0.1\",\"root\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/clean/src/domain\",\"scannedFiles\":1,\"verdict\":\"Pass\",\"findings\":[]}",
+    "stderr": ""
+  },
+  {
+    "project": "KotlinAssay",
+    "case": "violations",
+    "exitCode": 1,
+    "stdout": "{\"schemaVersion\":\"kotlin-assay/v0.1\",\"root\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/violations/src/domain\",\"scannedFiles\":1,\"verdict\":\"Fail\",\"findings\":[{\"path\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/violations/src/domain/Order.kt\",\"line\":1,\"column\":8,\"ruleId\":\"KTA-F002\",\"message\":\"Domain code does not perform named filesystem, network, or console effects.\"},{\"path\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/violations/src/domain/Order.kt\",\"line\":4,\"column\":38,\"ruleId\":\"KTA-F002\",\"message\":\"Domain code does not perform named filesystem, network, or console effects.\"},{\"path\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/violations/src/domain/Order.kt\",\"line\":5,\"column\":5,\"ruleId\":\"KTA-F002\",\"message\":\"Domain code does not perform named filesystem, network, or console effects.\"},{\"path\":\"/home/arun/Developer/Assay-USB-Review/KotlinAssay/examples/violations/src/domain/Order.kt\",\"line\":6,\"column\":5,\"ruleId\":\"KTA-F001\",\"message\":\"Expected domain failures are values, not throws or non-null assertions.\"}]}",
+    "stderr": ""
+  },
+  {
+    "project": "KotlinAssay",
+    "case": "empty",
+    "exitCode": 0,
+    "stdout": "{\"schemaVersion\":\"kotlin-assay/v0.1\",\"root\":\"/tmp/assay-adversarial-20iqklgi/KotlinAssay-empty\",\"scannedFiles\":0,\"verdict\":\"Pass\",\"findings\":[]}",
+    "stderr": ""
+  },
+  {
+    "project": "KotlinAssay",
+    "case": "comment",
+    "exitCode": 1,
+    "stdout": "{\"schemaVersion\":\"kotlin-assay/v0.1\",\"root\":\"/tmp/assay-adversarial-20iqklgi/KotlinAssay-comment\",\"scannedFiles\":1,\"verdict\":\"Fail\",\"findings\":[{\"path\":\"/tmp/assay-adversarial-20iqklgi/KotlinAssay-comment/Comment.kt\",\"line\":1,\"column\":4,\"ruleId\":\"KTA-F001\",\"message\":\"Expected domain failures are values, not throws or non-null assertions.\"}]}",
+    "stderr": ""
+  },
+  {
+    "project": "KotlinAssay",
+    "case": "missing",
+    "exitCode": 2,
+    "stdout": "",
+    "stderr": "kotlin-assay: not a directory: /tmp/assay-adversarial-20iqklgi/KotlinAssay-missing"
+  }
+]

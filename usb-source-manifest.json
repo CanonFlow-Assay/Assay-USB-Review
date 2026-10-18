@@ -1,0 +1,370 @@
+{
+  "source": "USB assay folder",
+  "files": [
+    {
+      "path": "DartAssay/.github/pull_request_template.md",
+      "sha256": "0f39960ddf5528626dacc32a2ab9c9160e72522a1c2d11f5aef7f764f1d59c66",
+      "bytes": 794
+    },
+    {
+      "path": "DartAssay/.github/scripts/check_layout.sh",
+      "sha256": "e251ea77840e1db0147b12254151b7e52e349d7aa317771e8660132bc13b9a70",
+      "bytes": 906
+    },
+    {
+      "path": "DartAssay/.github/workflows/ci.yml",
+      "sha256": "55c97581351993d6b0f547e9939cfc03db62f2e15f9fa31f6a55dc38a1b60e46",
+      "bytes": 2590
+    },
+    {
+      "path": "DartAssay/.gitignore",
+      "sha256": "6ba982a1037938099b58426bde6fe70c1e3bea525c81d3323a59499c87ce4153",
+      "bytes": 518
+    },
+    {
+      "path": "DartAssay/AGENTS.md",
+      "sha256": "25a43eef5ebb15bd2abd33d70ba8b2d9f543532f57da217fb9fc29248b7e126e",
+      "bytes": 2312
+    },
+    {
+      "path": "DartAssay/CODE_OF_CONDUCT.md",
+      "sha256": "a57dbe1a3b975882bfbedee93fb293f67ed156fd3fb78eb7dd06fb7d6a13d117",
+      "bytes": 424
+    },
+    {
+      "path": "DartAssay/CONTRIBUTING.md",
+      "sha256": "0a472a685883b7373b2f9a5346fec06f73659218f92b8e5d00b0db0f9dfd8457",
+      "bytes": 1253
+    },
+    {
+      "path": "DartAssay/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "DartAssay/README.md",
+      "sha256": "8804c8b70ad35dd68922f984af6cfe7ef21c82f20ee4389e302a16b9164c3b02",
+      "bytes": 2052
+    },
+    {
+      "path": "DartAssay/SECURITY.md",
+      "sha256": "cfedf6bb57dd0c3f70b81cbee7b31aaa8202965f7129909a85e2de3574743b74",
+      "bytes": 538
+    },
+    {
+      "path": "DartAssay/VISION.md",
+      "sha256": "4715a492cb4408f987a1033e9f783a511e696e1a83ef49eb81995d179fde73f3",
+      "bytes": 2757
+    },
+    {
+      "path": "DartAssay/analysis_options.yaml",
+      "sha256": "1590ac81153305da77494a751c50fae8fbe12476beb23622f954ab02aab5df25",
+      "bytes": 430
+    },
+    {
+      "path": "DartAssay/docs/CI-QUALIFICATION.md",
+      "sha256": "3bc2317b79e42b9956edbd39f8cb2ccedee936cb044fd6a0694bd64c43b26b96",
+      "bytes": 1033
+    },
+    {
+      "path": "DartAssay/docs/FUNCTIONAL-DART-FLUTTER-PROFILE-v0.1.md",
+      "sha256": "62221d7c0c2a4cac6f0c2f3b329d420f916c5753afd8dc4783ad09e3af42fc97",
+      "bytes": 3787
+    },
+    {
+      "path": "DartAssay/docs/M0-HUMAN-GATE-A.md",
+      "sha256": "3adbeb1367f6b81f66bf3dcf8b7f879eddab396cb41aab1a03890fe238fed660",
+      "bytes": 1268
+    },
+    {
+      "path": "DartAssay/docs/REFERENCE-ORDER-APP-ACCEPTANCE.md",
+      "sha256": "02b7df1eb9948b83072c15470883639c9fbbec34f68cac9e1740dbb313c741ab",
+      "bytes": 2218
+    },
+    {
+      "path": "DartAssay/docs/REPOSITORY-ARCHITECTURE.md",
+      "sha256": "97ebb8e03789fccff9772c98d9b9083f435dcc2e46c7a1ea045b567013a9f133",
+      "bytes": 1105
+    },
+    {
+      "path": "DartAssay/examples/reference_order_app/README.md",
+      "sha256": "5a8c4c81a89e1534604559bacd0a3d3fd609fd0893e05d62a9a3fdf4c4256be0",
+      "bytes": 637
+    },
+    {
+      "path": "DartAssay/pubspec.lock",
+      "sha256": "5bbf0e6325a3c6ce3a450dd2322645f20b5ba8c795e3d4b2763a5cb2aff4f21f",
+      "bytes": 114
+    },
+    {
+      "path": "DartAssay/pubspec.yaml",
+      "sha256": "777c144694f0d38bcf5b209fa6c9e311516cd91c9dc062b04adbc47af00e59d4",
+      "bytes": 350
+    },
+    {
+      "path": "DartAssay/skills/dart-flutter-functional/SKILL.md",
+      "sha256": "5bd46bd37e6a6c31e7b55182fe10644303869d201c0739345bc34f2f65364687",
+      "bytes": 552
+    },
+    {
+      "path": "KotlinAssay/.github/workflows/ci.yml",
+      "sha256": "fc44bf26f2d4d125334bbf347facafca3e7faed842f98e1dfa07cf1fff355506",
+      "bytes": 749
+    },
+    {
+      "path": "KotlinAssay/.gitignore",
+      "sha256": "c4e68d40e10952bbdd7f54435416a9a0300d9ba57222cdc37f16777e6d930a4d",
+      "bytes": 32
+    },
+    {
+      "path": "KotlinAssay/README.md",
+      "sha256": "64548a2d7f583acb6ebeb2349dc75e8c7f17ac43529e1df6991d61a4527524be",
+      "bytes": 981
+    },
+    {
+      "path": "KotlinAssay/docs/CONTRACT.md",
+      "sha256": "a395528b75e84892bdf3f13dab61e50881a68e4fedeebe86666d79249c3cc062",
+      "bytes": 615
+    },
+    {
+      "path": "KotlinAssay/examples/clean/src/domain/Order.kt",
+      "sha256": "2c8f5428efeae59dfc62e0ca4fadc779cc6ed82f7021c4256675b9759a79bcfa",
+      "bytes": 280
+    },
+    {
+      "path": "KotlinAssay/examples/violations/src/domain/Order.kt",
+      "sha256": "861c806133e6a409d19dcc25c183945e19913099f0e6c61dc0f5b7c0b6bcdd1f",
+      "bytes": 161
+    },
+    {
+      "path": "KotlinAssay/pom.xml",
+      "sha256": "043cf799d984d8587726aea119b495d354b9358e74d0db082c291b455fdbf2d6",
+      "bytes": 2245
+    },
+    {
+      "path": "KotlinAssay/skills/functional-kotlin/SKILL.md",
+      "sha256": "94732329536c6932a7f239b41c3154a8cbc658a6f7a737e5b8ddb1c7fcdfb581",
+      "bytes": 724
+    },
+    {
+      "path": "KotlinAssay/src/main/kotlin/org/canonflow/kotlinassay/Domain.kt",
+      "sha256": "c8b01359514c9f6a23e2d9d226ec09bc6f0925bc31888762a8aaac5b4bdc6eff",
+      "bytes": 1091
+    },
+    {
+      "path": "KotlinAssay/src/main/kotlin/org/canonflow/kotlinassay/Main.kt",
+      "sha256": "d3ebe77da59b9c0f42143be65ec242230d456043a51c156f319c77ddc4ca8311",
+      "bytes": 1947
+    },
+    {
+      "path": "KotlinAssay/src/main/kotlin/org/canonflow/kotlinassay/Scanner.kt",
+      "sha256": "a173e29f304d046a1f3142274d46a261edc58a8e91ec247176d0152ba2055e7a",
+      "bytes": 2850
+    },
+    {
+      "path": "KotlinAssay/src/test/kotlin/org/canonflow/kotlinassay/ScannerTest.kt",
+      "sha256": "a6f9a2713d44ee31d5c95a0b59f3feee5c91d8c36f19d1d2fe9de36c6fbdefa3",
+      "bytes": 1404
+    },
+    {
+      "path": "PythonAssay/.github/workflows/ci.yml",
+      "sha256": "457163c3850615dd35aff591161bc1b47378dc1ec694f91bfca0130dd6402431",
+      "bytes": 602
+    },
+    {
+      "path": "PythonAssay/.gitignore",
+      "sha256": "34a958cbbfad51fb60956c33c220826e8eaee840a0708d836baf62713a3949d4",
+      "bytes": 53
+    },
+    {
+      "path": "PythonAssay/README.md",
+      "sha256": "1816ecd0583ec9d2c1f54bc0c9f1e6e45c9a5b9047f31b344088f2d03ee1b2b1",
+      "bytes": 875
+    },
+    {
+      "path": "PythonAssay/docs/CONTRACT.md",
+      "sha256": "556007ae76e9078d4bea1e22cdb285dbf73c90c2b8325669ab31d6150d16d1df",
+      "bytes": 661
+    },
+    {
+      "path": "PythonAssay/examples/clean/src/domain/order.py",
+      "sha256": "384aa61f4588ae32fb2c2e94e01051b64ad1307edb9afee6f3da390979549f63",
+      "bytes": 333
+    },
+    {
+      "path": "PythonAssay/examples/violations/src/domain/order.py",
+      "sha256": "387dc5ece4a2001ebf43f693dd8ea76be949c0c91eba08a4e01331e156c87ba4",
+      "bytes": 134
+    },
+    {
+      "path": "PythonAssay/pyproject.toml",
+      "sha256": "bf1fff4f624add527d5e09c1bb84036b1bfd3b04d8762121c92303924b76cca6",
+      "bytes": 595
+    },
+    {
+      "path": "PythonAssay/skills/functional-python/SKILL.md",
+      "sha256": "9f6748f9723dae188691ed4a122132015917e1ab055179d7d4891443970cbab6",
+      "bytes": 804
+    },
+    {
+      "path": "PythonAssay/src/python_assay/__init__.py",
+      "sha256": "72adca84174d2077e8a3f1b0b75370696f51bc0015065e1a63e348305d1d3695",
+      "bytes": 185
+    },
+    {
+      "path": "PythonAssay/src/python_assay/cli.py",
+      "sha256": "0ca3b0824da350606b99ce54186f5baa299beab8ba5791cacceaa3f6d50ed4a4",
+      "bytes": 1718
+    },
+    {
+      "path": "PythonAssay/src/python_assay/domain.py",
+      "sha256": "062051055a42516f149e0da7ae70179680b83ddbcb6da9015fc6571490217c03",
+      "bytes": 1336
+    },
+    {
+      "path": "PythonAssay/src/python_assay/scanner.py",
+      "sha256": "56f5971133b6331dc1b9d5cec93bc3459093e0789854bdb8fc204102696b6f10",
+      "bytes": 2456
+    },
+    {
+      "path": "PythonAssay/tests/test_scanner.py",
+      "sha256": "37fb2fc47aac00c756f886a2cda323323ac4c355d9649f20520f91f3cbbd1fb4",
+      "bytes": 1744
+    },
+    {
+      "path": "RustAssay/.github/workflows/ci.yml",
+      "sha256": "7febf426550ed315156535fd98499d621ba3e57ae1ba32c520a753e96e36317e",
+      "bytes": 562
+    },
+    {
+      "path": "RustAssay/.gitignore",
+      "sha256": "be9078a32af747dd914ec0e2c733b28a23629c20b7b804f24019f8a0f86c42a6",
+      "bytes": 21
+    },
+    {
+      "path": "RustAssay/Cargo.lock",
+      "sha256": "580594dce2687a1ca845f898e6a0202c1288b71c0343383e140013041faa6b53",
+      "bytes": 154
+    },
+    {
+      "path": "RustAssay/Cargo.toml",
+      "sha256": "f4394401f16e6974b3ad0b8e9b7d5fa5f5e6f6092619a16bd2629fbf85882075",
+      "bytes": 452
+    },
+    {
+      "path": "RustAssay/README.md",
+      "sha256": "bc2f4470b5da7ec7a111a91056105bee29e5c7a98e1d9c9fa9f02ff9406919ae",
+      "bytes": 998
+    },
+    {
+      "path": "RustAssay/docs/CONTRACT.md",
+      "sha256": "67049e8fca10b6f3f27264238c78b196112666136fd647552493f8548c3dd93c",
+      "bytes": 856
+    },
+    {
+      "path": "RustAssay/examples/clean/src/domain/order.rs",
+      "sha256": "e7e2ac7cc9bb04dbd22cbf0ac6b7a230131508728ad5bc59452232618fc944bf",
+      "bytes": 327
+    },
+    {
+      "path": "RustAssay/examples/violations/src/domain/order.rs",
+      "sha256": "2fdd95eadde30f16af63546bca00fc8c6ed22bbd83b4e43a5903422d58c1325f",
+      "bytes": 131
+    },
+    {
+      "path": "RustAssay/rust-toolchain.toml",
+      "sha256": "c910997cb152c6dc8ed13b1fdf9fa28a4ed30d6776123e27dd6170e5c66067a0",
+      "bytes": 86
+    },
+    {
+      "path": "RustAssay/skills/functional-rust/SKILL.md",
+      "sha256": "b0555390eaad5147605ecb81d098e9aad6e72d0d1001dc60f00a5c521b5781aa",
+      "bytes": 825
+    },
+    {
+      "path": "RustAssay/src/domain.rs",
+      "sha256": "aa6cffbcf983c496b39710a0265c6c26e304fad33605b9513ceff329d1289c34",
+      "bytes": 1290
+    },
+    {
+      "path": "RustAssay/src/lib.rs",
+      "sha256": "4665876d0baa6ec01e74fbca124c743065b40421103d31abdcbf21fc1d577765",
+      "bytes": 5203
+    },
+    {
+      "path": "RustAssay/src/main.rs",
+      "sha256": "3e96db29d82aa71f5c7392a344c2c0510c47641354ce701838b157da97d13ce3",
+      "bytes": 2420
+    },
+    {
+      "path": "RustAssay/tests/domain.rs",
+      "sha256": "544a195b9d28aa56334f5c1c2d5c2f31ea8f4a0c45f60685e5cda83afafee702",
+      "bytes": 589
+    },
+    {
+      "path": "SwiftAssay/.github/workflows/ci.yml",
+      "sha256": "dac424213354ddacde71de510e5e7c4c3cf9c95bcd16d2f8e5fae432aa691415",
+      "bytes": 418
+    },
+    {
+      "path": "SwiftAssay/.gitignore",
+      "sha256": "0c6c9a704d10eaf23bf502cc2449a73bf1c9e254ea5420e96b4c3a05ae5cee20",
+      "bytes": 19
+    },
+    {
+      "path": "SwiftAssay/.swift-version",
+      "sha256": "220c9ed65eccd53a151a3299648ff4614b8bb899b73a2f6ef5edb05129ee7091",
+      "bytes": 4
+    },
+    {
+      "path": "SwiftAssay/Examples/Clean/Sources/Domain/Order.swift",
+      "sha256": "01462699d3086c4582824b2e2a42dfe6341d5a6bcfb008c98a580ea17327f8ec",
+      "bytes": 238
+    },
+    {
+      "path": "SwiftAssay/Examples/Violations/Sources/Domain/Order.swift",
+      "sha256": "95595a3f54e1d361b233d565682453849fad3522b5e18e5798faef1c1ee5816b",
+      "bytes": 144
+    },
+    {
+      "path": "SwiftAssay/Package.swift",
+      "sha256": "a146bea72a27f0478c0ad03d3ad758b6a785b9f071e66c6adc44ba304dbb3216",
+      "bytes": 505
+    },
+    {
+      "path": "SwiftAssay/README.md",
+      "sha256": "b66819840f2717dc3da2e444efe7250dd536d26af24a0d050c842b593bcc94ae",
+      "bytes": 796
+    },
+    {
+      "path": "SwiftAssay/Sources/SwiftAssay/Domain.swift",
+      "sha256": "c6fc3502cea8538ee43d27ca91d6198cc67e2c7a32ffd23d97a88de0da6ba2da",
+      "bytes": 1518
+    },
+    {
+      "path": "SwiftAssay/Sources/SwiftAssay/Scanner.swift",
+      "sha256": "3144dee9b63917af63cb7126aec3234ad85871fcff3ae02e1f32f7afa82c67ab",
+      "bytes": 3021
+    },
+    {
+      "path": "SwiftAssay/Sources/SwiftAssayCLI/main.swift",
+      "sha256": "2e632e87d203209dffb9ba71cb8416714acbea4ae98685189e8cc96e120da0a8",
+      "bytes": 2482
+    },
+    {
+      "path": "SwiftAssay/Tests/SwiftAssayTests/SwiftAssayTests.swift",
+      "sha256": "5f67d1fafe4b14cf096ae3e67913a76902007b6bbe7cdeae8eff2649bcd2e0e0",
+      "bytes": 1339
+    },
+    {
+      "path": "SwiftAssay/docs/CONTRACT.md",
+      "sha256": "41135a9cb47456b6893990e8b2c3b07ab1ce56f1e7707df0795890b8878a3d32",
+      "bytes": 623
+    },
+    {
+      "path": "SwiftAssay/skills/functional-swift/SKILL.md",
+      "sha256": "d1052e21528a2b441efe4b4c7518562c892c173cf6b9190457eba6285348f266",
+      "bytes": 819
+    }
+  ]
+}

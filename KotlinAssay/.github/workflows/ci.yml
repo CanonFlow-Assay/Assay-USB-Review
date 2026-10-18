@@ -1,0 +1,23 @@
+name: KotlinAssay CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 25
+      - run: mvn -B -ntp verify
+      - run: java -cp target/classes:$HOME/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/2.4.20/kotlin-stdlib-2.4.20.jar org.canonflow.kotlinassay.MainKt check examples/clean/src/domain --json
+      - run: '! java -cp target/classes:$HOME/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/2.4.20/kotlin-stdlib-2.4.20.jar org.canonflow.kotlinassay.MainKt check examples/violations/src/domain'

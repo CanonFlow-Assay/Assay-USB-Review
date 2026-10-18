@@ -1,0 +1,114 @@
+{
+  "scope": "USB Assay source evaluation; no original USB files changed",
+  "sourceFiles": 73,
+  "projects": {
+    "PythonAssay": {
+      "testsPassed": 5,
+      "runtime": "Python 3.14.8",
+      "pin": "3.14.7",
+      "exactPinQualified": false
+    },
+    "RustAssay": {
+      "testsPassed": 5,
+      "runtime": "Rust 1.99.0 stable",
+      "pin": "1.98.1",
+      "exactPinQualified": false,
+      "format": "Passed",
+      "clippy": "Passed"
+    },
+    "SwiftAssay": {
+      "testsPassed": 5,
+      "runtime": "Swift 6.4",
+      "exactPinQualified": true
+    },
+    "KotlinAssay": {
+      "testsPassed": 5,
+      "runtime": "Kotlin 2.4.20 / Java 21 compatibility harness",
+      "pin": "Maven / JDK 25",
+      "exactPinQualified": false,
+      "limitation": "Maven unavailable; tests invoked directly after removing test annotations in a temporary harness only"
+    },
+    "DartAssay": {
+      "stage": "M0 contract; implementation not admitted",
+      "layout": "Passed",
+      "analysis": "Passed with --no-pub",
+      "runtime": "Flutter 3.47.6 / Dart 3.13.5",
+      "pin": "Flutter 3.47.0",
+      "exactPinQualified": false,
+      "tests": "Not applicable at M0"
+    }
+  },
+  "findings": [
+    {
+      "severity": "limitation",
+      "projects": [
+        "PythonAssay",
+        "RustAssay",
+        "SwiftAssay",
+        "KotlinAssay"
+      ],
+      "finding": "All four return Pass for empty directory scans; no nonempty scope requirement",
+      "evidence": "adversarial-results.json"
+    },
+    {
+      "severity": "limitation",
+      "projects": [
+        "PythonAssay",
+        "RustAssay",
+        "SwiftAssay",
+        "KotlinAssay"
+      ],
+      "finding": "All four flag forbidden fragments inside comments; scanners are lexical",
+      "evidence": "adversarial-results.json"
+    },
+    {
+      "severity": "documentation",
+      "projects": [
+        "KotlinAssay",
+        "PythonAssay",
+        "RustAssay",
+        "SwiftAssay"
+      ],
+      "finding": "README claims Apache-2.0 but USB source has no LICENSE file; confirm licensing before public distribution"
+    },
+    {
+      "severity": "qualification",
+      "finding": "Only Swift used the exact requested runtime; exact Maven/JDK25, Python, Rust and Flutter pins were not qualified"
+    }
+  ],
+  "kotlinSelection": {
+    "retained": "Existing local compiler PSI engine, strict policy, four-state verdicts, evidence receipts",
+    "selected": [
+      "Functional authoring guidance",
+      "Order validation and deterministic fold example"
+    ],
+    "adaptations": [
+      "PersistentList replaces List",
+      "Top-level Accepted and Rejected cases satisfy strict sealed-interface policy",
+      "Eight behavior checks cover all five rejection branches and bounded arithmetic"
+    ],
+    "notSelected": [
+      "Substring scanner",
+      "Two-state receipt",
+      "Maven/JDK25 packaging"
+    ],
+    "knownExampleLimit": "Long arithmetic is illustrative; no overflow protection",
+    "integrationCommit": "5fa406b",
+    "validation": {
+      "policyAssertionsPassed": 48,
+      "qualificationCasesPassed": 17,
+      "orderBehaviorChecksPassed": 8,
+      "orderVerification": "Pass; complete scope; no findings"
+    },
+    "patch": "kotlin-integration.patch"
+  },
+  "publication": {
+    "default": "Private until destination and visibility are confirmed",
+    "notClaimed": [
+      "Release readiness",
+      "General purity proof",
+      "Android or iOS qualification",
+      "License grant for unlicensed source"
+    ]
+  }
+}

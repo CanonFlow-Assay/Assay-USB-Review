@@ -1,0 +1,8 @@
+**/build/
+**/target/
+**/.build/
+**/.dart_tool/
+**/.gradle/
+**/.kotlinassay/
+**/__pycache__/
+**/*.pyc

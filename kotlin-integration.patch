@@ -1,0 +1,146 @@
+diff --git a/.kotlinassay.json b/.kotlinassay.json
+index a8f95fa..f2319f5 100644
+--- a/.kotlinassay.json
++++ b/.kotlinassay.json
+@@ -6,7 +6,8 @@
+   ],
+   "boundaryRoots": [
+     "src/adapters",
+-    "tests"
++    "tests",
++    "examples"
+   ],
+   "requiredCommands": [
+     [
+diff --git a/README.md b/README.md
+index f21d65c..59d3d7a 100644
+--- a/README.md
++++ b/README.md
+@@ -36,3 +36,19 @@ Negative cases are created under `build/qualification`; the real Nalan specimen
+ A pass means these named syntax rules and actually executed commands passed over the recorded source snapshot. This prototype does not resolve arbitrary symbols/aliases, infer all effects, prove deep immutability or certify Android alarm/background/Bluetooth behavior. Known call-name checks are conservative and can reject a harmless name. Untested syntax or dependencies must receive review rather than an assumed purity guarantee. The compiler PSI adapter uses a localized opt-in to the pinned compiler's internal/deprecation-marked API.
+ 
+ Reference clones are pinned in [reference-lock.json](reference-lock.json). No upstream repository was changed or published. Zenbridge/Haskell was not found in the searched local material; no project-specific recollection is assumed.
++
++## USB feature selection
++
++The USB Kotlin prototype contributed functional authoring guidance in
++[docs/functional-kotlin.md](docs/functional-kotlin.md) and the order-domain
++example in `examples/order`. The example uses persistent collections and
++top-level sealed outcome cases to fit the existing PSI profile. Run:
++
++```sh
++./kotlin-assay verify examples/order
++```
++
++Its eight behavior checks cover each validation branch and bounded-price
++totals. Money arithmetic is illustrative and does not guard against Long
++overflow. The lexical scanner and its weaker two-state Pass/Fail receipt were
++not imported. Maven/JDK 25 packaging remains separate from this Java 21 tool.
+diff --git a/docs/functional-kotlin.md b/docs/functional-kotlin.md
+new file mode 100644
+index 0000000..2dad772
+--- /dev/null
++++ b/docs/functional-kotlin.md
+@@ -0,0 +1,7 @@
++# Functional Kotlin
++
++Use `val` properties in data classes and sealed interfaces or sealed classes for alternatives. Return a domain `Accepted` or `Rejected` value for expected validation failure rather than throw or use `!!`. Keep domain transformations total where possible and use folds to make accumulation explicit.
++
++Parse and validate untrusted input at the boundary. File, network, clock, logging, and process effects belong in a named adapter or CLI shell. Tests must cover each alternative and avoid relying on ambient mutable state.
++
++For this repository, use persistent collections and top-level ADT cases as required by `strict-syntax/0.1`. Authoring guidance does not confer a verification verdict.
+diff --git a/examples/order/.kotlinassay.json b/examples/order/.kotlinassay.json
+new file mode 100644
+index 0000000..4c0de70
+--- /dev/null
++++ b/examples/order/.kotlinassay.json
+@@ -0,0 +1,16 @@
++{
++  "schema": "kotlin-assay-policy/0.1",
++  "profile": "strict-syntax/0.1",
++  "domainRoots": [
++    "domain"
++  ],
++  "boundaryRoots": [
++    "tests"
++  ],
++  "requiredCommands": [
++    [
++      "python3",
++      "run-tests.py"
++    ]
++  ]
++}
+diff --git a/examples/order/domain/Order.kt b/examples/order/domain/Order.kt
+new file mode 100644
+index 0000000..c097d13
+--- /dev/null
++++ b/examples/order/domain/Order.kt
+@@ -0,0 +1,23 @@
++package kotlinassay.examples.orders
++
++import kotlinx.collections.immutable.PersistentList
++
++data class DraftLine(val sku: String, val quantity: Int, val unitPriceCents: Long)
++data class Order(val identifier: String, val lines: PersistentList<DraftLine>)
++sealed interface OrderDecision
++data class Accepted(val order: Order): OrderDecision
++data class Rejected(val reason: String): OrderDecision
++
++fun createOrder(identifier: String, lines: PersistentList<DraftLine>): OrderDecision = when {
++    identifier.isBlank() -> Rejected("order identifier is required")
++    lines.isEmpty() -> Rejected("an order needs at least one line")
++    lines.any { it.sku.isBlank() } -> Rejected("each line needs a SKU")
++    lines.any { it.quantity <= 0 } -> Rejected("quantity must be positive")
++    lines.any { it.unitPriceCents < 0 } -> Rejected("unit price cannot be negative")
++    else -> Accepted(Order(identifier, lines))
++}
++
++// Illustrative arithmetic only; callers must bound values to prevent Long overflow.
++fun totalCents(order: Order): Long = order.lines.fold(0L) { total, line ->
++    total + line.quantity * line.unitPriceCents
++}
+diff --git a/examples/order/run-tests.py b/examples/order/run-tests.py
+new file mode 100644
+index 0000000..adad60c
+--- /dev/null
++++ b/examples/order/run-tests.py
+@@ -0,0 +1,12 @@
++#!/usr/bin/env python3
++"""Execute the example already compiled by kotlin-assay verify."""
++import json
++from pathlib import Path
++import subprocess
++
++root = Path(__file__).resolve().parent
++lock = json.loads((root.parents[1] / 'toolchain.lock.json').read_text())
++classpath = ':'.join([str(root / '.kotlinassay/compiled.jar'),
++    str(Path(lock['compilerHome']) / 'lib/kotlin-stdlib.jar'), lock['persistentCollectionsJar']])
++raise SystemExit(subprocess.run(['java', '-cp', classpath,
++    'kotlinassay.examples.orders.tests.OrderTestsKt']).returncode)
+diff --git a/examples/order/tests/OrderTests.kt b/examples/order/tests/OrderTests.kt
+new file mode 100644
+index 0000000..542f3d9
+--- /dev/null
++++ b/examples/order/tests/OrderTests.kt
+@@ -0,0 +1,20 @@
++package kotlinassay.examples.orders.tests
++
++import kotlinassay.examples.orders.*
++import kotlinx.collections.immutable.persistentListOf
++
++fun main() {
++    val line = DraftLine("book", 2, 1250)
++    val checks = listOf(
++        createOrder("", persistentListOf(line)) == Rejected("order identifier is required"),
++        createOrder("order", persistentListOf()) == Rejected("an order needs at least one line"),
++        createOrder("order", persistentListOf(line.copy(sku = ""))) == Rejected("each line needs a SKU"),
++        createOrder("order", persistentListOf(line.copy(quantity = 0))) == Rejected("quantity must be positive"),
++        createOrder("order", persistentListOf(line.copy(unitPriceCents = -1))) == Rejected("unit price cannot be negative"),
++        createOrder("order", persistentListOf(line)) == Accepted(Order("order", persistentListOf(line))),
++        totalCents(Order("order", persistentListOf(line))) == 2500L,
++        totalCents(Order("order", persistentListOf(line, line.copy(quantity = 1)))) == 3750L,
++    )
++    check(checks.all { it }) { "Order example regression" }
++    println("Order example checks: ${checks.size}; failed: 0")
++}
